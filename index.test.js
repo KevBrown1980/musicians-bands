@@ -1,5 +1,5 @@
-const {sequelize} = require('./db');
-const {Band, Musician} = require('./index')
+const { sequelize } = require('./db');
+const { Band, Musician } = require('./index')
 
 describe('Band and Musician Models', () => {
     /**
@@ -13,12 +13,20 @@ describe('Band and Musician Models', () => {
     })
 
     test('can create a Band', async () => {
-        // TODO - test creating a band
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+
+        test('can create a Band', async () => {
+            const testUser = await User.create({ name: 'George', password: '123' });
+            expect(testUser.name).toBe('George');
+        })
     })
+
+
 
     test('can create a Musician', async () => {
         // TODO - test creating a musician
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+        test('can create a Band', async () => {
+            const testUser = await User.create({ name: 'George', password: '123' });
+            expect(testUser.name).toBe('George');
+        })
     })
 })
