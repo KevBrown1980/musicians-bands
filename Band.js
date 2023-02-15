@@ -7,7 +7,7 @@ let Band = sequelize.define("band", {
     genre: Sequelize. STRING
 })
 
-await sequelize.sync();
+
 
 module.exports = {
     Band
