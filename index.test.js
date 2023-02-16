@@ -1,5 +1,5 @@
 const { sequelize } = require('./db');
-const { Band, Musician } = require('./index')
+const { Band, Musician, Song, } = require('./index')
 
 describe('Band and Musician Models', () => {
     /**
@@ -36,10 +36,15 @@ describe('Band and Musician Models', () => {
             expect(testUser4.instrument).toBe('Singer');
         })
 
+        test('can create a Song', async () => {
+            const song1 = await Song.create({ title: 'Wonderwall' });
+            expect(song1.title).toBe('Wonderwall');
+        })
+
+
+
         test('test if musicians are in band', async () => {
-            
-            
-// User to add post to
+// User to add post to // NEED to find out how to tst - going over this tomorrow.
 const someMusician = await Musician.findByPk(1)
 // Adding the post with an id of 4 to someUser
 await someMusician.addBand(1)
